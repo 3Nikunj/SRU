@@ -45,11 +45,34 @@ s = "Nikunj sondawale"
 # print(s.isalpha())
 
 
-s = "nikunj"
-print(len(s))
+# s = "nikunj"
+# print(len(s))
 
-z = str(123)
-print(type(z))
+# z = str(123)
+# print(type(z))
 
-z = str(False)
-print(type(z))
+# z = str(False)
+# print(type(z))
+
+
+
+
+
+s = "01.01.01.01"
+s1 = "52.0.45.147"
+
+def isValid(s):
+    split_s = s.split('.')    # ['222','111','111','111']
+    if len(split_s) != 4:
+        return False
+    
+    for i in split_s:
+        if len(i)!=1 and i[0] == '0':
+            return False
+        if not i.isdigit():
+            return False
+        if int(i)<0 or int(i)>255:
+            return False
+    return True
+
+isValid(s)
