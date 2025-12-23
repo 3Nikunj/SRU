@@ -1,5 +1,5 @@
 # File handling
-# 1. open :
+
 # 2. with :
 
 # Open a file
